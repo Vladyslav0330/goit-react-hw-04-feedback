@@ -27,17 +27,18 @@ export function App() {
   };
 
   const countTotalFeedback = () => {
-    return setGood + setNeutral + setBad;
+    return good + neutral + bad;
   };
 
   const countPositiveFeedbackPercentage = () => {
     const positivePercentage =
-      +((setGood / countTotalFeedback()) * 100).toFixed(2) || 0;
+      +((good / countTotalFeedback()) * 100).toFixed(2) || 0;
 
     return positivePercentage;
   };
 
   const total = countTotalFeedback();
+
   return (
     <>
       <Section title={'Please leave feedback'}>
